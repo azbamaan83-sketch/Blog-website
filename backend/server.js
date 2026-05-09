@@ -16,6 +16,10 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+app.use(cors({
+  origin: "*", // later you can restrict to frontend URL
+}));
+
 // Routes
 app.use("/api/auth", authRoutes);
 
